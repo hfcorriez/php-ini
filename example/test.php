@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/../Builder.php';
+
 $builder = new \CodeGun\Util\Ini\Builder(array(
     'a'        => 'd',
     'b'        => array('test'=> 'c'),

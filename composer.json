@@ -18,5 +18,6 @@
             "CodeGun\\Util\\Ini": "."
         }
     },
-    "target-dir": "CodeGun/Util/CronTab"
+    "target-dir": "CodeGun/Util/Ini",
+    "minimum-stability": "dev"
 }
