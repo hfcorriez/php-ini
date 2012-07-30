@@ -18,11 +18,5 @@
             "CodeGun\\Util\\Ini": "."
         }
     },
-    "target-dir": "CodeGun/Util/Ini",
-    "minimum-stability": "dev",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.1-dev"
-        }
-    }
+    "target-dir": "CodeGun/Util/Ini"
 }
