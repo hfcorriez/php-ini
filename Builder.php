@@ -1,6 +1,6 @@
 <?php
 
-namespace Ini;
+namespace CodeGun\Util\Ini;
 
 class Builder
 {
