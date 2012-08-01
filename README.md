@@ -1,13 +1,13 @@
-php-ini
+Intro
 =========
 
 Ini Parser and Builder for PHP
 
 
-Installion
+Install
 ==============
 
-You can use `codegun/ini` to install with `composer.phar install`
+Add `codegun/ini` to `composer.json` then install with `composer.phar install`
 
 
 Usage
