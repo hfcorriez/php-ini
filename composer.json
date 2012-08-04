@@ -15,8 +15,7 @@
     },
     "autoload": {
         "psr-0": {
-            "CodeGun\\Util\\Ini": "."
+            "CodeGun\\Ini": "."
         }
-    },
-    "target-dir": "CodeGun/Util/Ini"
+    }
 }

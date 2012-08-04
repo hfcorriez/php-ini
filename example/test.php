@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/../Builder.php';
+require __DIR__ . '/../src/CodeGun/Ini/Builder.php';
 
 $builder = new \CodeGun\Ini\Builder(array(
     'a'        => 'd',
