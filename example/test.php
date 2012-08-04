@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../Builder.php';
 
-$builder = new \CodeGun\Util\Ini\Builder(array(
+$builder = new \CodeGun\Ini\Builder(array(
     'a'        => 'd',
     'b'        => array('test'=> 'c'),
     'database' => array(

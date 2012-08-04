@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeGun\Util\Ini;
+namespace CodeGun\Ini;
 
 class Parser
 {
