@@ -78,7 +78,40 @@ class ParserTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals("bar", $p->get("foo"));
 		$this->assertEquals("ok", $p->get("named.var"));
 		$this->assertEquals("yup", $p->get("further.named.var"));
+	}
 
+	/**
+	 * Test reserved words
+	 * @dataProvider reservedWords
+	 */
+	public function testGet_reservedWords($reservedWord, $expected)
+	{
+		# (null, yes, no, true, false, on, off, none)
+		$string = $this->combine(
+			"k = $reservedWord"
+		);
+
+		$p = Parser::loadFromString($string);
+		$this->assertEquals($expected, $p->get("k"));
+	}
+
+	/**
+	 * @return array
+	 */
+	public function reservedWords()
+	{
+		return array(
+			array("null", null),
+			array("none", null),
+
+			array("false", null),
+			array("no", null),
+			array("off", null),
+
+			array("true", 1),
+			array("yes", 1),
+			array("on", 1)
+		);
 	}
 
 	/**

@@ -6,44 +6,44 @@ namespace CodeGun\Ini;
  */
 class BuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * @covers CodeGun\Ini\Builder::build
-     * @dataProvider dataSets
-     */
-    public function testBuild($input, $output)
-    {
-        $this->assertEquals(
+	/**
+	 * @covers CodeGun\Ini\Builder::build
+	 * @dataProvider dataSets
+	 */
+	public function testBuild($input, $output)
+	{
+		$this->assertEquals(
 			$output["array"],
 			Builder::build($input)
 		);
-    }
+	}
 
 
 
-    /**
-     * @covers CodeGun\Ini\Builder::buildString
+	/**
+	 * @covers CodeGun\Ini\Builder::buildString
 	 * @dataProvider dataSets
-     */
-    public function testBuildString($input, $output)
-    {
+	 */
+	public function testBuildString($input, $output)
+	{
 		$this->assertEquals(
 			$output["string"],
 			Builder::buildString($input)
 		);
-    }
+	}
 
-    /**
-     * @covers CodeGun\Ini\Builder::get
+	/**
+	 * @covers CodeGun\Ini\Builder::get
 	 * @dataProvider dataSets
-     */
-    public function testGet($input, $output)
-    {
+	 */
+	public function testGet($input, $output)
+	{
 		$builder = new Builder($input);
 		$this->assertEquals(
 			$output["string"],
 			$builder->get()
 		);
-    }
+	}
 
 	/**
 	 * @covers CodeGun\Ini\Builder::saveFile
@@ -62,12 +62,12 @@ class BuilderTest extends \PHPUnit_Framework_TestCase
 		$this->assertTrue($exists);
 	}
 
-    /**
-     * @covers CodeGun\Ini\Builder::saveFile
-     * @dataProvider datasets
-     */
-    public function testSaveFile_bytes($input, $output)
-    {
+	/**
+	 * @covers CodeGun\Ini\Builder::saveFile
+	 * @dataProvider datasets
+	 */
+	public function testSaveFile_bytes($input, $output)
+	{
 		$tmp=tempnam("/tmp", "buildertest_");
 		$builder = new Builder($input);
 		$bytes = $builder->saveFile($tmp);
@@ -80,20 +80,20 @@ class BuilderTest extends \PHPUnit_Framework_TestCase
 		}
 
 		$this->assertEquals($size, $bytes);
-    }
+	}
 
-    /**
-     * @covers CodeGun\Ini\Builder::__toString
+	/**
+	 * @covers CodeGun\Ini\Builder::__toString
 	 * @dataProvider dataSets
-     */
-    public function test__toString($input, $output)
-    {
+	 */
+	public function test__toString($input, $output)
+	{
 		$builder = new Builder($input);
 		$this->assertEquals(
 			$output["string"],
 			$builder->get()
 		);
-    }
+	}
 
 
 	//
